@@ -5,8 +5,6 @@ Step by step how to redirect hosts to wsl2
 
 **Crie um arquivo .ps1 com esse script na sua área de trabalho ou faça o download do arquivo**
 
-[wsl2_host.ps1](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fbcbfa31-9bc9-4b66-ac5e-72ba99e73dc8/wsl2_host.ps1)
-
 ```powershell
 # Find WSL2 IP address
 $wsl_ip = $(wsl hostname -I).Trim();
@@ -45,17 +43,16 @@ Invoke-Expression "netsh interface portproxy show v4tov4"
 
 **Abra o Agendador de Tarefas e clique em Criar Tarefa…**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cef6d236-9c4d-41eb-a7eb-a6646c916f15/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e8627886-fc83-49a3-aca8-0569e436f5a1/Untitled.png)
+![Untitled](https://github.com/hlgboot/wsl2_host_redirect/assets/69645018/1bd425e9-07a4-4e16-9f9a-b555854a38cc)
+![Untitled](https://github.com/hlgboot/wsl2_host_redirect/assets/69645018/60ee60f4-5e09-4a5f-9316-58dc58d813fe)
 
 **Dê um nome, habilite Executar com privilégios mais altos e configure para Windows 10**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/300493b6-0dec-4526-8d7d-b96b159110e6/Untitled.png)
+![Untitled](https://github.com/hlgboot/wsl2_host_redirect/assets/69645018/26df0ec4-86c9-4797-95c5-05d5ffbb420a)
 
 **Crie um novo disparador como esse**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d983bb3f-4f50-4864-8749-40003f052936/Untitled.png)
+![Untitled](https://github.com/hlgboot/wsl2_host_redirect/assets/69645018/91950d6b-ab03-435b-a9a1-797bae5d54b6)
 
 **Crie uma nova ação e coloque o seguinte código trocando filePath pelo caminho completo ate o arquivo .ps1**
 
@@ -63,7 +60,7 @@ Invoke-Expression "netsh interface portproxy show v4tov4"
 Powershell.exe -ExecutionPolicy Bypass -f filePath
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9704ec03-1276-49ef-b02b-94c05e56357e/Untitled.png)
+![Untitled](https://github.com/hlgboot/wsl2_host_redirect/assets/69645018/21e5b8f8-5da0-4582-8e0b-de62d39ed959)
 
 ### Variável ambiente
 
